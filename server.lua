@@ -1,0 +1,23 @@
+ESX = nil
+
+TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
+
+RegisterServerEvent('ALERTAROBO')
+AddEventHandler('ALERTAROBO', function(source)
+TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'error', text = 'Alguien acaba de encañoarte o dejado libre.',length = 8000})
+
+	
+end)
+
+
+RegisterServerEvent('robo:jugador')
+AddEventHandler('robo:jugador', function(targetid, playerheading, playerCoords,  playerlocation)
+	_source = source
+
+
+TriggerClientEvent('mythic_notify:client:SendAlert', _source, { type = 'error', text = ' No tienes Item necesario para robar '})
+TriggerClientEvent('robo:getarrested', targetid, playerheading, playerCoords, playerlocation)
+TriggerClientEvent('robo:doarrested', _source)
+
+
+end)
