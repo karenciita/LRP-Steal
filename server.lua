@@ -15,7 +15,7 @@ AddEventHandler('robo:jugador', function(targetid, playerheading, playerCoords, 
 	_source = source
 
 
-TriggerClientEvent('mythic_notify:client:SendAlert', _source, { type = 'error', text = ' No tienes Item necesario para robar '})
+
 TriggerClientEvent('robo:getarrested', targetid, playerheading, playerCoords, playerlocation)
 TriggerClientEvent('robo:doarrested', _source)
 
