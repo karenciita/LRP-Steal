@@ -1,4 +1,5 @@
 # LRP-Steal
+These scripts are free on the fivem platform!
 This was designed to enhance the role of theft.  It was created by Shinxd and Karen for LatamRP.
 
 
